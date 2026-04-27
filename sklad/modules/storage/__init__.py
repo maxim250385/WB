@@ -3,6 +3,7 @@
 from .core import (
     DEFAULT_DEST,
     REGIONS,
+    WH_NAMES,
     fetch_json,
     load_articles,
     load_lines,
@@ -20,6 +21,7 @@ from .wb_api import (
 __all__ = [
     "DEFAULT_DEST",
     "REGIONS",
+    "WH_NAMES",
     "fetch_json",
     "load_articles",
     "load_lines",
