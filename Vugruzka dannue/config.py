@@ -1,9 +1,14 @@
 # config.py — все настройки проекта
 
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
 # ─────────────────────────────────────────────────────────────
-# ID Google Таблицы (из URL между /d/ и /edit)
+# ID Google Таблицы — хранится в .env: SPREADSHEET_ID=...
 # ─────────────────────────────────────────────────────────────
-SPREADSHEET_ID = ""
+SPREADSHEET_ID = os.getenv("SPREADSHEET_ID")
 
 # Папка с файлами отчётов
 REPORTS_FOLDER = "reports"

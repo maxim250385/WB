@@ -1,19 +1,22 @@
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # --- НАСТРОЙКИ УВЕДОМЛЕНИЙ ---
-SEND_TELEGRAM = True       # Оставляем Телегу
-SEND_EMAIL = True          # Добавляем Почту
-SEND_EXCEL_FILE = True     # Отправлять файл в обоих случаях
+SEND_TELEGRAM = True
+SEND_EMAIL = True
+SEND_EXCEL_FILE = True
 
 # --- Telegram ---
-TG_TOKEN = ''
-TG_CHAT_ID = 
+TG_TOKEN = os.getenv("TG_TOKEN")
+TG_CHAT_ID = int(os.getenv("TG_CHAT_ID", "0"))
 
 # --- Email (Yandex) ---
 SMTP_SERVER = "smtp.yandex.ru"
 SMTP_PORT = 465
-EMAIL_SENDER = ""    # Ваш логин
-EMAIL_PASSWORD = ""     # 16 символов от Яндекса
+EMAIL_SENDER = os.getenv("EMAIL_SENDER")
+EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD")
 
 # --- Папки ---
 DATA_DIR = "Data"
