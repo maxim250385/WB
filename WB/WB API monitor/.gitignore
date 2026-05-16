@@ -1,0 +1,10 @@
+env/
+__pycache__/
+*.pyc
+*.pyo
+data/.env
+data/state.json
+data/messages.log
+data/pending_changes.json
+monitor.log*
+wb_monitor_session.session
